@@ -1,0 +1,180 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Briefcase, Users, Sparkles, ArrowRight } from "lucide-react";
+
+const jobs = [
+  {
+    title: "Support Worker",
+    type: "Full-Time / Part-Time / Casual",
+    desc: "Deliver daily care and emotional support.",
+  },
+  {
+    title: "Team Leader",
+    type: "Full-Time",
+    desc: "Supervise daily operations and staff development.",
+  },
+  {
+    title: "Registered Manager",
+    type: "Full-Time",
+    desc: "Oversee care quality, compliance, and training.",
+  },
+];
+
+export default function CareersPage() {
+  return (
+    <main className="bg-white">
+
+      {/* 🔥 HERO HEADER (MINIMAL) */}
+      <section className="px-6 lg:px-16 pt-20 pb-10">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-semibold text-gray-900">
+            Careers at UltraWell
+          </h1>
+
+          <p className="mt-6 text-gray-600 text-lg">
+            Join a compassionate team making a real difference every day.
+          </p>
+        </div>
+      </section>
+
+      {/* 🔥 WHY WORK WITH US (PRIMARY SECTION) */}
+      <section className="relative px-6 lg:px-16 py-24 overflow-hidden">
+
+        {/* BACKGROUND GLOW */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white to-accent/10" />
+        <div className="absolute -top-20 right-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
+
+        <div className="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+          {/* LEFT CONTENT */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+              Why Work With Us
+            </h2>
+
+            <div className="mt-4 w-16 h-[3px] bg-gradient-to-r from-primary to-accent rounded-full" />
+
+            <p className="mt-6 text-gray-600 leading-relaxed">
+              At UltraWell Home, we believe that great care begins with
+              empowered people. We invest in our team, support growth,
+              and create an environment where your work truly matters.
+            </p>
+          </div>
+
+          {/* RIGHT CARDS */}
+          <div className="space-y-5">
+            {[
+              {
+                icon: Users,
+                text: "Structured training and continuous development",
+              },
+              {
+                icon: Sparkles,
+                text: "Supportive, respectful and inclusive environment",
+              },
+              {
+                icon: Briefcase,
+                text: "Opportunities for international candidates (sponsorship dependent)",
+              },
+            ].map((item, i) => {
+              const Icon = item.icon;
+
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex items-start gap-4 p-6 rounded-2xl border border-gray-200 bg-white hover:shadow-lg transition"
+                >
+                  <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/10">
+                    <Icon size={18} className="text-primary" />
+                  </div>
+
+                  <p className="text-gray-600">{item.text}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 🔥 JOB OPENINGS (SECONDARY FOCUS) */}
+      <section className="px-6 lg:px-16 py-24 bg-gray-50">
+
+        <div className="max-w-6xl mx-auto">
+
+          <div className="mb-12">
+            <h2 className="text-3xl font-semibold text-gray-900">
+              Current Opportunities
+            </h2>
+            <p className="mt-3 text-gray-600">
+              Explore roles where you can grow, contribute, and make impact.
+            </p>
+          </div>
+
+          <div className="grid gap-6">
+            {jobs.map((job, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative border border-gray-200 rounded-2xl p-6 bg-white hover:shadow-xl transition overflow-hidden"
+              >
+
+                {/* HOVER EFFECT */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-r from-primary/5 to-accent/5" />
+
+                <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {job.title}
+                    </h3>
+                    <p className="text-sm text-primary font-medium">
+                      {job.type}
+                    </p>
+                  </div>
+
+                  <p className="text-gray-600 text-sm max-w-sm">
+                    {job.desc}
+                  </p>
+
+                  <button className="flex items-center gap-2 text-primary font-medium hover:underline">
+                    Apply <ArrowRight size={16} />
+                  </button>
+
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 🔥 FINAL CTA */}
+      <section className="px-6 lg:px-16 py-24">
+
+        <div className="max-w-6xl mx-auto text-center bg-gradient-to-r from-primary to-accent text-white rounded-3xl p-12 shadow-xl">
+
+          <h3 className="text-2xl md:text-3xl font-semibold">
+            Build a career that truly matters
+          </h3>
+
+          <p className="mt-4 text-white/90">
+            Join a team that values compassion, growth, and real impact.
+          </p>
+
+          <button className="mt-6 bg-white text-primary px-6 py-3 rounded-xl font-medium hover:opacity-90">
+            Apply Today
+          </button>
+
+        </div>
+      </section>
+
+    </main>
+  );
+}

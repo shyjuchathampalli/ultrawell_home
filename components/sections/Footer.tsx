@@ -13,7 +13,6 @@ export default function Footer() {
   const links = [
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Who We Are", href: "/who-we-are" },
     { label: "Visit Us", href: "/visit" },
     { label: "Referrals", href: "/referrals" },
     { label: "FAQ", href: "/faq" },

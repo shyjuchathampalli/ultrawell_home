@@ -70,7 +70,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium">Phone</p>
                     <p className="text-sm text-gray-600">
-                      +44 114 258 7769
+                      +44 7872 908711
                     </p>
                   </div>
                 </div>
@@ -80,7 +80,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium">Email</p>
                     <p className="text-sm text-gray-600">
-                      info@ultrawellhome.com
+                      admin@ultrawellhome.co.uk
                     </p>
                   </div>
                 </div>

@@ -39,7 +39,7 @@ export default function Navbar() {
             <div className="flex items-center gap-2">
             <Phone size={16} className="text-primary" />
             <span className="font-semibold text-primary">
-                +44 114 258 7769
+                +44 7872 908711
             </span>
             </div>
 

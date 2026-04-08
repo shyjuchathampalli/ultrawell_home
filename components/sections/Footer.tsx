@@ -120,7 +120,7 @@ export default function Footer() {
               </p>
 
               <p className="hover:text-[#f59e0b] transition cursor-pointer">
-                020-8664 9220
+                +44 7872 908711
               </p>
 
               <p className="hover:text-[#f59e0b] transition cursor-pointer">

@@ -7,7 +7,6 @@ export default function AboutSplitSection() {
   return (
     <section className="w-full relative overflow-hidden">
 
-      {/* 🔥 MAIN BACKGROUND (CRIMSON GRADIENT) */}
       <div className="absolute inset-0 
         bg-gradient-to-br 
         from-[#c12e5a] 
@@ -15,12 +14,10 @@ export default function AboutSplitSection() {
         to-[#7e1d3a]">
       </div>
 
-      {/* 🔥 GOLDEN ACCENT GLOW */}
       <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] 
         bg-[#f59e0b]/20 blur-3xl rounded-full">
       </div>
 
-      {/* 🔥 SOFT LIGHT OVERLAY FOR DEPTH */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.08),transparent_40%)]"></div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 relative">

@@ -18,42 +18,42 @@ const services = [
     title: "Personal Care Support",
     desc: "Assistance with daily activities while promoting dignity and autonomy.",
     detail:
-      "Our team provides respectful, person-centred assistance with daily routines such as personal hygiene, mobility, and self-care. We focus on empowering residents to maintain independence while ensuring comfort, dignity, and confidence in everyday life.",
+      "Dignity is at the heart of what we do. We provide discreet assistance with morning and evening routines, hygiene, and dressing, ensuring you feel confident and ready for the day.",
   },
   {
     icon: Pill,
     title: "Medication Management",
     desc: "Safe administration and monitoring of prescribed medication.",
     detail:
-      "We ensure accurate medication administration with professional oversight, reducing risks and promoting wellbeing. Our staff work closely with healthcare professionals to monitor effects, maintain compliance, and support long-term health outcomes.",
+      "Peace of mind for you and your loved ones. Our trained staff ensure prescriptions are ordered, stored safely, and taken on time, with rigorous record-keeping to track your health.",
   },
   {
     icon: Brain,
     title: "Emotional & Behavioural Support",
-    desc: "Positive behaviour strategies, counselling access, and daily emotional care.",
+    desc: "Positive behaviour strategies, counselling access, and daily emotional care",
     detail:
-      "We provide structured emotional support tailored to individual needs, including behaviour management strategies and access to counselling. Our goal is to create a stable, supportive environment where residents feel understood and emotionally secure.",
+      "We provide a safe space to talk and grow. Using positive reinforcement and personalized coping strategies, we help navigate life’s ups and downs while connecting you to specialist counseling when needed.",
   },
   {
     icon: Users,
     title: "Community Integration",
     desc: "Encouraging participation in local activities, education, and volunteering.",
     detail:
-      "We actively encourage residents to engage with their community through social activities, education, and volunteering. This builds confidence, social skills, and a strong sense of belonging beyond their home environment.",
+      "Your neighborhood is your home. We support you in finding local clubs, attending college courses, or volunteering for causes you care about, helping you build a strong social network.",
   },
   {
     icon: Home,
     title: "Skills Development",
     desc: "Support for cooking, budgeting, and household management.",
     detail:
-      "We help residents develop essential life skills such as cooking, budgeting, and managing their home. These practical abilities empower individuals to live more independently and confidently in the long term.",
+      "Building the tools for independence. From mastering a new recipe to managing a weekly budget, we work alongside you to sharpen the practical skills needed for modern living.",
   },
   {
     icon: Utensils,
     title: "Health & Nutrition Monitoring",
     desc: "Regular check-ins, balanced meals, and liaison with healthcare professionals.",
     detail:
-      "Our approach includes regular health monitoring, nutritious meal planning, and coordination with healthcare providers. We ensure residents maintain a healthy lifestyle while receiving the care they need.",
+      "A healthy body supports a happy mind. We help with meal planning, grocery shopping for fresh ingredients, and coordinating appointments with your GP or dentist.",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function ServicesPage() {
       <section className="relative py-24 px-6 lg:px-16 overflow-hidden">
 
         {/* BACKGROUND */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-accent/5"></div>
+        <div className="absolute inset-0 via-white to-accent/5"></div>
 
         <div className="relative max-w-5xl mx-auto text-center">
 
@@ -76,8 +76,7 @@ export default function ServicesPage() {
           <div className="mt-6 w-20 h-[3px] mx-auto bg-gradient-to-r from-primary to-accent rounded-full"></div>
 
           <p className="mt-6 text-gray-600 text-lg leading-relaxed">
-            Tailored support designed to empower independence, wellbeing,
-            and a meaningful everyday life for every resident.
+            We provide a range of supported living services tailored to individual needs, enabling residents to live meaningful and independent lives.
           </p>
         </div>
       </section>

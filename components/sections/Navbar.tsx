@@ -10,9 +10,11 @@ import { usePanel } from "@/context/PanelContext";
 const navItems = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Pathway", href: "/pathway" },
   { label: "FAQ", href: "/faq" },
   { label: "Careers", href: "/careers" },
   { label: "Policies and Compliance", href: "/policies" },
+  { label: "Referrals", href: "/referrals" },
   { label: "Contact Us", href: "/contact" },
 ];
 

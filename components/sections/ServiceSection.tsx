@@ -54,11 +54,7 @@ export default function ServicesSection() {
   return (
     <section className="w-full py-24 bg-white relative overflow-hidden">
 
-      {/* 🔥 BACKGROUND AMBIENCE */}
-      <div className="absolute inset-0 
-        bg-[radial-gradient(circle_at_10%_20%,rgba(193,46,90,0.08),transparent_40%),
-             radial-gradient(circle_at_90%_30%,rgba(255,165,0,0.08),transparent_40%)]" />
-
+      <div className="absolute inset-0" />
       <div className="relative max-w-7xl mx-auto px-6">
 
         {/* HEADER */}

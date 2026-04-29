@@ -22,7 +22,7 @@ export default function ContactPage() {
       {/* 🔥 HERO */}
       <section className="px-6 lg:px-16 pt-20 pb-12 text-center">
         <h1 className="text-4xl md:text-5xl font-semibold text-gray-900">
-          Get in Touch
+          We’d love to hear from you
         </h1>
 
         <p className="mt-4 text-gray-600 max-w-xl mx-auto">
@@ -148,10 +148,32 @@ export default function ContactPage() {
 
       {/* 🔥 OPTIONAL MAP (future ready) */}
       <section className="px-6 lg:px-16 pb-24">
-        <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden border">
+        <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden border border-gray-200 shadow-sm">
 
-          <div className="h-[300px] flex items-center justify-center bg-gray-100 text-gray-500">
-            Map integration (Google Maps / iframe)
+          {/* Section Header */}
+          <div className="p-6 bg-white border-b border-gray-100">
+            <h2 className="text-2xl font-semibold text-gray-900">
+              Visit Us in Croydon
+            </h2>
+            <p className="mt-2 text-sm text-gray-600">
+              Conveniently located in Croydon, London — easily accessible for visits,
+              enquiries, and care consultations.
+            </p>
+          </div>
+
+          {/* Google Map Embed */}
+          <div className="w-full h-[400px]">
+            <iframe
+              title="UltraWell Home Croydon Location"
+              src="https://www.google.com/maps?q=Croydon,London,UK&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            />
           </div>
 
         </div>

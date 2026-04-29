@@ -16,7 +16,7 @@ export default function HighlightStrip() {
           </div>
 
           <h3 className="text-xl md:text-2xl font-semibold leading-snug">
-            Safe, Supported <br /> Living
+            24/7 Compassionate <br /> Support 
           </h3>
         </div>
 
@@ -28,7 +28,7 @@ export default function HighlightStrip() {
           </div>
 
           <h3 className="text-xl md:text-2xl font-semibold leading-snug">
-            Building Independence <br /> Every Day
+            Fully Equipped  <br /> Croydon Home
           </h3>
         </div>
 

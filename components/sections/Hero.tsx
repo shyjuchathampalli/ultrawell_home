@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { usePanel } from "@/context/PanelContext";
 import {
   Heart,
   ShieldCheck,
@@ -12,23 +13,20 @@ import {
 const features = [
   {
     icon: Heart,
-    text: "Compassionate recovery care",
+    text: "24/7 Compassionate Support",
   },
   {
     icon: ShieldCheck,
-    text: "Safe & structured environment",
+    text: "Fully Equipped Croydon Home",
   },
   {
     icon: Users,
-    text: "Highly trained professionals",
-  },
-  {
-    icon: Activity,
-    text: "24/7 personalised support",
+    text: "Person-Centred Approach",
   },
 ];
 
 export default function Hero() {
+  const { setPanel } = usePanel();
   return (
     <section className="relative w-full min-h-[90vh] flex items-center">
 
@@ -58,66 +56,52 @@ export default function Hero() {
           className="text-white max-w-xl"
         >
           <h1 className="text-3xl md:text-5xl font-semibold leading-tight">
-            Empowering Independence
+            Safe, Supported Living 
             <br />
             <span className="text-accent">
-              Through Compassionate Care
+              Where Every Resident Thrives
             </span>
           </h1>
-        </motion.div>
 
-        {/* ✅ FEATURES (FIXED STRUCTURE) */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="mt-10"
-        >
+          {/* ✅ SUBTEXT */}
+          <p className="mt-5 text-sm md:text-base text-white/85 leading-relaxed max-w-lg">
+            At UltraWell Home, we provide personalised support for adults with learning disabilities, mental health needs, and physical disabilities — empowering them to live with dignity, safety, and purpose.
+          </p>
 
-          {/* DESKTOP GRID */}
-          <div className="hidden sm:grid grid-cols-2 gap-4 max-w-2xl">
-            {features.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={i}
-                  className="flex items-center gap-4 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-4 rounded-xl text-white hover:scale-[1.02] transition"
-                >
-                  <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/20 shrink-0">
-                    <Icon size={18} className="text-primary" />
-                  </div>
+          {/* ✅ CTA BUTTONS */}
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            
+            {/* Primary */}
+            <button
+            onClick={() => setPanel("enquire")}
+            className="
+              bg-primary text-white 
+              px-6 py-3 
+              rounded-full 
+              text-sm md:text-base font-medium
+              shadow-md hover:opacity-90 transition
+              w-full sm:w-auto
+            ">
+              Get started today
+            </button>
 
-                  <p className="text-sm font-medium">
-                    {item.text}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* 🔥 MOBILE SLIDER */}
-          <div className="sm:hidden flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 scrollbar-hide">
-
-            {features.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={i}
-                  className="min-w-[85%] snap-start flex items-center gap-4 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-4 rounded-xl text-white"
-                >
-                  <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/20 shrink-0">
-                    <Icon size={18} className="text-primary" />
-                  </div>
-
-                  <p className="text-sm font-medium">
-                    {item.text}
-                  </p>
-                </div>
-              );
-            })}
+            {/* Secondary */}
+            <button
+            onClick={() => setPanel("refer")}
+            className="
+              border border-white/40 text-white 
+              px-6 py-3 
+              rounded-full 
+              text-sm md:text-base font-medium
+              backdrop-blur-sm hover:bg-white/10 transition
+              w-full sm:w-auto
+            ">
+              Make a Referral
+            </button>
 
           </div>
         </motion.div>
+
       </div>
     </section>
   );

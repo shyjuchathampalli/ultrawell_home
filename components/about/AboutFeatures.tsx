@@ -1,61 +1,103 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+import {
+  Heart,
+  ShieldCheck,
+  Sparkles,
+  Users,
+  Smile,
+} from "lucide-react";
 
-const features = [
+const values = [
   {
-    title: "Strength Based Approach",
-    desc: "We focus on what residents want to achieve, empowering independence through guided support.",
+    title: "Respect",
+    desc: "We treat every resident as an individual.",
+    icon: Users,
   },
   {
-    title: "Specialized for Transitions",
-    desc: "Our 18–25 program helps young adults move confidently into independent life.",
+    title: "Dignity",
+    desc: "We uphold personal rights and self-expression.",
+    icon: Sparkles,
   },
   {
-    title: "Technology Enabled Support",
-    desc: "Real-time care insights ensure safety while respecting dignity and privacy.",
+    title: "Safety",
+    desc: "We provide structured, professional care in a homely setting.",
+    icon: ShieldCheck,
   },
   {
-    title: "Culturally Competent",
-    desc: "We embrace diversity and reflect the Croydon community in our care approach.",
+    title: "Empowerment",
+    desc: "We encourage self-confidence and participation.",
+    icon: Heart,
+  },
+  {
+    title: "Well-being",
+    desc: "We promote holistic health — physical, mental, and emotional.",
+    icon: Smile,
   },
 ];
 
 export default function AboutFeatures() {
   return (
     <section className="py-24 px-6 bg-white">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Section Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="max-w-3xl"
+        >
+          <p className="text-primary font-semibold uppercase tracking-[0.25em]">
+            Our Values
+          </p>
 
-      <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mt-4 leading-tight">
+            The principles that shape
+            <span className="text-primary"> every aspect of our care</span>
+          </h2>
 
-        <h2 className="text-3xl font-semibold text-gray-900 mb-12">
-          Local Care, Global Ambition
-        </h2>
+          <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+            At UltraWell Home, our values guide how we support,
+            protect, and empower every resident to live with
+            confidence, dignity, and purpose.
+          </p>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
+          {values.map((item, i) => {
+            const Icon = item.icon;
 
-          {features.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              className="flex gap-4 p-6 border rounded-2xl hover:shadow-lg transition"
-            >
-              <CheckCircle className="text-primary mt-1" />
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -6 }}
+                className="p-8 border border-gray-200 rounded-3xl hover:shadow-lg transition-all duration-300 bg-white"
+              >
+                {/* Icon */}
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+                  <Icon className="w-7 h-7 text-primary" />
+                </div>
 
-              <div>
-                <h3 className="font-semibold text-lg text-gray-900">
+                {/* Title */}
+                <h3 className="text-2xl font-semibold text-gray-900">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-600 mt-2 text-sm">
+                {/* Description */}
+                <p className="mt-3 text-gray-600 leading-relaxed text-base">
                   {item.desc}
                 </p>
-              </div>
-            </motion.div>
-          ))}
-
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

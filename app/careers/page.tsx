@@ -33,7 +33,7 @@ export default function CareersPage() {
           </h1>
 
           <p className="mt-6 text-gray-600 text-lg">
-            Join a compassionate team making a real difference every day.
+            Join a compassionate team making a difference every day. At UltraWell Home, our staff are the heart of our service.
           </p>
         </div>
       </section>
@@ -67,15 +67,15 @@ export default function CareersPage() {
             {[
               {
                 icon: Users,
-                text: "Structured training and continuous development",
+                text: "Structured training and development",
               },
               {
                 icon: Sparkles,
-                text: "Supportive, respectful and inclusive environment",
+                text: "Competitive pay and supportive environment",
               },
               {
                 icon: Briefcase,
-                text: "Opportunities for international candidates (sponsorship dependent)",
+                text: "Opportunities for international candidates (subject to sponsorship)",
               },
             ].map((item, i) => {
               const Icon = item.icon;
@@ -155,25 +155,121 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* 🔥 FINAL CTA */}
-      <section className="px-6 lg:px-16 py-24">
+      <section className="px-6 lg:px-16 py-24 bg-white">
+  <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10">
 
-        <div className="max-w-6xl mx-auto text-center bg-gradient-to-r from-primary to-accent text-white rounded-3xl p-12 shadow-xl">
+    {/* LEFT: GROW WITH US */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="relative rounded-3xl border border-gray-200 bg-gradient-to-br from-primary/5 to-accent/5 p-8 overflow-hidden"
+    >
+      <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
 
-          <h3 className="text-2xl md:text-3xl font-semibold">
-            Build a career that truly matters
-          </h3>
+      <div className="relative">
+        <h2 className="text-3xl font-semibold text-gray-900">
+          Grow With Us
+        </h2>
 
-          <p className="mt-4 text-white/90">
-            Join a team that values compassion, growth, and real impact.
-          </p>
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          A career in social care is a journey, and we are here to support
+          you every step of the way. At UltraWell Home, we provide tailored
+          development opportunities designed to help you excel, no matter
+          your starting point.
+        </p>
 
-          <button className="mt-6 bg-white text-primary px-6 py-3 rounded-xl font-medium hover:opacity-90">
-            Apply Today
-          </button>
+        <div className="mt-8 space-y-5">
 
+          {[
+            {
+              icon: Sparkles,
+              title: "Professional Training",
+              desc: "Access accredited qualifications and bespoke programs via the industry-leading QCS platform.",
+            },
+            {
+              icon: Briefcase,
+              title: "Certified Growth",
+              desc: "Complete your Care Certificate, Safeguarding, and First Aid through a modern, app-based learning portal.",
+            },
+            {
+              icon: Users,
+              title: "Ongoing Support",
+              desc: "From induction to specialized certifications, we provide mentoring and tools to build a meaningful career.",
+            },
+          ].map((item, i) => {
+            const Icon = item.icon;
+
+            return (
+              <div key={i} className="flex items-start gap-4">
+                <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center shadow-sm border border-gray-100">
+                  <Icon className="text-primary" size={18} />
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-gray-900">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 mt-1">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </section>
+
+        <button className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-accent text-white font-medium hover:opacity-90 transition">
+          Apply Now <ArrowRight size={18} />
+        </button>
+      </div>
+    </motion.div>
+
+    {/* RIGHT: VOLUNTEERING */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1 }}
+      viewport={{ once: true }}
+      className="rounded-3xl border border-gray-200 bg-gray-50 p-8 flex flex-col justify-between"
+    >
+      <div>
+        <h2 className="text-3xl font-semibold text-gray-900">
+          Community Volunteering
+        </h2>
+
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          Not ready for a full role? Join us as a volunteer to share your
+          skills, gain experience, and make a meaningful difference in the
+          lives of our residents.
+        </p>
+
+        <div className="mt-8 flex items-start gap-4 p-5 rounded-2xl bg-white border border-gray-200">
+          <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+            <Users className="text-primary" size={18} />
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-900">
+              Make an Impact
+            </h3>
+            <p className="text-sm text-gray-600 mt-1">
+              Build real-world care experience while supporting a compassionate community.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="/contact"
+        className="mt-8 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-primary text-primary font-medium hover:bg-primary hover:text-white transition"
+      >
+        Inquire About Volunteering <ArrowRight size={18} />
+      </a>
+    </motion.div>
+
+  </div>
+</section>
 
     </main>
   );

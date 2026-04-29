@@ -61,7 +61,7 @@ export default function EnquireForm() {
       <div>
         <label className="text-sm text-gray-600">Message</label>
         <textarea
-          rows="4"
+          rows={4}
           className="mt-2 w-full px-4 py-3 rounded-xl border border-gray-200 
           focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition resize-none"
         />

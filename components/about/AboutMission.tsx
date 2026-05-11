@@ -7,7 +7,7 @@ export default function AboutMission() {
 
       <div className="max-w-6xl mx-auto">
 
-        <p className="uppercase text-white/80 font-semibold">
+        <p className="uppercase text-white/80 font-semibold text-xl">
           Our Mission
         </p>
 

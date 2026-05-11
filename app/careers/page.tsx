@@ -129,26 +129,46 @@ export default function CareersPage() {
                 {/* HOVER EFFECT */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-r from-primary/5 to-accent/5" />
 
-                <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div className="relative flex justify-between items-start gap-6">
 
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      {job.title}
-                    </h3>
-                    <p className="text-sm text-primary font-medium">
-                      {job.type}
-                    </p>
+                    {/* LEFT CONTENT */}
+                    <div className="flex-1">
+
+                      <h3 className="text-lg font-semibold text-gray-900">
+                        {job.title}
+                      </h3>
+
+                      <p className="text-sm text-primary font-medium">
+                        {job.type}
+                      </p>
+
+                      <p className="text-gray-600 text-sm mt-6 max-w-sm">
+                        {job.desc}
+                      </p>
+
+                    </div>
+
+                    {/* RIGHT BUTTON */}
+                    <button
+                      disabled
+                      className="
+                        shrink-0
+                        inline-flex items-center gap-2
+                        px-4 py-2
+                        rounded-xl
+                        border border-primary/30
+                        text-primary
+                        font-medium
+                        text-sm
+                        cursor-not-allowed
+                        opacity-70
+                        whitespace-nowrap
+                      "
+                    >
+                      Apply <ArrowRight size={16} />
+                    </button>
+
                   </div>
-
-                  <p className="text-gray-600 text-sm max-w-sm">
-                    {job.desc}
-                  </p>
-
-                  <button className="flex items-center gap-2 text-primary font-medium hover:underline">
-                    Apply <ArrowRight size={16} />
-                  </button>
-
-                </div>
               </motion.div>
             ))}
           </div>
@@ -219,7 +239,7 @@ export default function CareersPage() {
           })}
         </div>
 
-        <button className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-accent text-white font-medium hover:opacity-90 transition">
+        <button disabled className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-accent text-white font-medium hover:opacity-90 transition cursor-not-allowed">
           Apply Now <ArrowRight size={18} />
         </button>
       </div>

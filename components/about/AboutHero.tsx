@@ -12,7 +12,7 @@ export default function AboutHero() {
         {/* subtle wave */}
         <div className="absolute bottom-10 left-0 w-full h-20 bg-[url('/wave.svg')] opacity-30"></div>
 
-        <h1 className="text-4xl md:text-5xl font-semibold">
+        <h1 className="text-4xl md:text-5xl font-semibold" style={{ fontSize: "64px" }}>
           About us
         </h1>
       </div>

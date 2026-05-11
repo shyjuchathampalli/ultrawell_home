@@ -9,8 +9,7 @@ import {
   Home,
   Utensils,
 } from "lucide-react";
-import FAQSection from "@/components/ui/FAQSection";
-import { faqTabs } from "@/lib/faqData";
+
 
 const services = [
   {
@@ -124,6 +123,24 @@ export default function ServicesPage() {
                   {item.detail}
                 </p>
 
+                <button
+                  disabled
+                  className="
+                    relative mt-6
+                    inline-flex items-center gap-2
+                    px-4 py-2
+                    rounded-xl
+                    border border-primary/30
+                    text-primary
+                    text-sm font-medium
+                    opacity-70
+                    cursor-not-allowed
+                    whitespace-nowrap
+                  "
+                >
+                  See More
+                </button>
+
               </motion.div>
             );
           })}
@@ -152,16 +169,6 @@ export default function ServicesPage() {
             </button>
           </div>
         </div>
-      </section>
-
-      <section className="bg-gray-50">
-
-      <div className="w-full mx-auto">
-
-          <FAQSection tabs={faqTabs} />
-
-      </div>
-
       </section>
 
     </main>

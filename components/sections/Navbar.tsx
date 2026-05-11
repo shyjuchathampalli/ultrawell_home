@@ -15,6 +15,7 @@ const navItems = [
   { label: "Careers", href: "/careers" },
   { label: "Policies and Compliance", href: "/policies" },
   { label: "Referrals", href: "/referrals" },
+  { label: "Visit us", href: "/visit-us" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -33,9 +34,6 @@ export default function Navbar() {
         <div className="w-full px-6 lg:px-12 xl:px-24 py-2 flex items-center justify-between text-sm">
 
             {/* LEFT: TAGLINE */}
-            <span className="text-xs text-primary/80 font-medium">
-            Safe, Supported Independent Living
-            </span>
 
             {/* RIGHT: PHONE */}
             <div className="flex items-center gap-2">

@@ -50,7 +50,7 @@ export default function AboutFeatures() {
           viewport={{ once: true }}
           className="max-w-3xl"
         >
-          <p className="text-primary font-semibold uppercase tracking-[0.25em]">
+          <p className="text-primary text-xl font-semibold uppercase tracking-[0.25em]">
             Our Values
           </p>
 

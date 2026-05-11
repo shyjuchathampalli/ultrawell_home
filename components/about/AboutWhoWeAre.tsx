@@ -14,7 +14,7 @@ export default function AboutWhoWeAre() {
           viewport={{ once: true }}
         >
           {/* Section Label */}
-          <p className="text-primary font-semibold uppercase tracking-[0.25em]">
+          <p className="text-primary text-xl font-semibold uppercase tracking-[0.25em]">
             Who We Are
           </p>
 
@@ -40,14 +40,27 @@ export default function AboutWhoWeAre() {
 
           {/* Mission Section */}
           <div className="mt-14 border-t border-gray-200 pt-10">
-            <p className="text-primary font-semibold uppercase mt-10 tracking-[0.25em]">
+            <p className="text-primary text-xl font-semibold uppercase mt-10 tracking-[0.25em]">
               Our Mission
             </p>
 
             <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-              To deliver personalised support that promotes independence,
-              dignity, and wellbeing in every aspect of life.
+              To deliver personalised support that promotes independence, dignity, and wellbeing in every aspect of life.
             </p>
+
+            <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+              We believe everyone deserves a place where they feel safe, valued and truly at home. 
+            </p>
+
+            <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+              Our mission is to support adults with learning disabilities, mental health needs, and physical disabilities to live life with confidence and independence, at their own pace.
+            </p>
+
+            <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+              Through kindness, understanding, and personalised support, we help build meaningful routines, develop life skills, and feel a genuine sense of belonging within their homes and communities.
+            </p>
+
+
           </div>
         </motion.div>
       </div>
